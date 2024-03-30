@@ -1,58 +1,54 @@
-/* Launcher Header Styles */
-.launcher-header {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/* Website List with Logos Styles */
+.website-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-/* Launcher Menu Styles */
-.launcher-menu {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-.launcher-menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.launcher-menu li {
-    display: inline-block;
-    margin-right: 20px;
-    cursor: pointer;
-    color: #fff;
-}
-
-.launcher-menu li:hover {
-    text-decoration: underline;
-}
-
-/* Launcher Content Styles */
-.launcher-content {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+.website-box {
     background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.website-box img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.website-box p {
+    text-align: center;
     color: #fff;
 }
 
-.launcher-listings {
+.website-box:hover {
+    background-color: #333;
+}
+
+/* Pages List Styles */
+.pages-list ul {
     padding: 0;
     list-style: none;
 }
 
-.launcher-listings li {
+.pages-list li {
     margin-bottom: 10px;
 }
 
-.launcher-listings li a {
+.pages-list li a {
     color: #fff;
     text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
-.launcher-listings li p {
-    color: #ccc;
-    font-size: 14px;
+.pages-list li a:hover {
+    background-color: #333;
 }

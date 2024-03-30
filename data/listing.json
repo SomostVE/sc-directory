@@ -1,38 +1,26 @@
 {
-    "communities": [
-      {
-        "name": "Example Community 1",
-        "description": "A description of the community.",
-        "url": "https://example.com/community1"
-      },
-      {
-        "name": "Example Community 2",
-        "description": "Another community description.",
-        "url": "https://example.com/community2"
-      }
-    ],
     "websites": [
       {
-        "name": "Example Website 1",
-        "description": "A description of the website.",
-        "url": "https://example.com/website1"
+        "name": "Website 1",
+        "description": "Description of Website 1",
+        "url": "https://example.com/website1",
+        "logo": "assets/img/logo1.png"
       },
       {
-        "name": "Example Website 2",
-        "description": "Another website description.",
-        "url": "https://example.com/website2"
+        "name": "Website 2",
+        "description": "Description of Website 2",
+        "url": "https://example.com/website2",
+        "logo": "assets/img/logo2.png"
       }
     ],
-    "tools": [
+    "pages": [
       {
-        "name": "Example Tool 1",
-        "description": "A description of the tool.",
-        "url": "https://example.com/tool1"
+        "name": "Page 1",
+        "url": "https://example.com/page1"
       },
       {
-        "name": "Example Tool 2",
-        "description": "Another tool description.",
-        "url": "https://example.com/tool2"
+        "name": "Page 2",
+        "url": "https://example.com/page2"
       }
     ]
   }

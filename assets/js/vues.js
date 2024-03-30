@@ -28,16 +28,29 @@ Vue.component('sc-directory', {
       },
       filterListings() {
         this.filteredListings = this.listings;
+      },
+      goToWebsite(url) {
+        window.open(url, '_blank');
       }
     },
     template: `
-      <div class="launcher-listings">
-        <ul>
-          <li v-for="item in filteredListings" :key="item.name">
-            <a :href="item.url" target="_blank">{{ item.name }}</a>
-            <p>{{ item.description }}</p>
-          </li>
-        </ul>
+      <div>
+        <!-- Main Page - Website List with Logos -->
+        <div v-if="currentCategory === 'websites'" class="website-grid">
+          <div v-for="item in filteredListings" :key="item.name" class="website-box" @click="goToWebsite(item.url)">
+            <img :src="item.logo" :alt="item.name + ' Logo'">
+            <p>{{ item.name }}</p>
+          </div>
+        </div>
+  
+        <!-- Pages List -->
+        <div v-if="currentCategory === 'pages'" class="pages-list">
+          <ul>
+            <li v-for="item in filteredListings" :key="item.name">
+              <a :href="item.url" target="_blank">{{ item.name }}</a>
+            </li>
+          </ul>
+        </div>
       </div>
     `
   });
@@ -45,7 +58,7 @@ Vue.component('sc-directory', {
   new Vue({
     el: '#app',
     data: {
-      currentCategory: 'communities' // Default category
+      currentCategory: 'websites' // Default category: Websites
     },
     methods: {
       setCurrentCategory(category) {

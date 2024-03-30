@@ -23,9 +23,22 @@
 
         <!-- Launcher Content Area -->
         <main class="launcher-content">
-            <sc-directory v-if="currentCategory" :category="currentCategory"></sc-directory>
+            <div v-if="currentCategory === 'websites'" class="website-grid">
+                <div v-for="item in filteredListings" :key="item.name" class="website-box" @click="goToWebsite(item.url)">
+                    <img :src="item.logo" :alt="item.name + ' Logo'">
+                    <p>{{ item.name }}</p>
+                </div>
+            </div>
         </main>
-    </div>
+        <main class="launcher-content">
+            <div v-if="currentCategory === 'websites'" class="website-grid">
+                <div v-for="item in filteredListings" :key="item.name" class="website-box" @click="goToWebsite(item.url)">
+                    <img :src="item.logo" :alt="item.name + ' Logo'">
+                    <p>{{ item.name }}</p>
+                </div>
+            </div>
+        </main>
+        
 
     <!-- Your script tags here -->
     <script src="assets/js/vue.js"></script>
