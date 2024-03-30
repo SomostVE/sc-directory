@@ -10,11 +10,17 @@ body {
     color: #333;
 }
 
+/* Header Styles */
 header {
-    background-color: #0077cc;
+    background-color: #000;
     color: #fff;
     padding: 20px;
-    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
@@ -24,28 +30,38 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+nav ul li:hover {
+    text-decoration: underline;
 }
 
+/* Main Content Styles */
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #1c1c1c;
+    color: #fff;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #0077cc;
+.listings {
+    padding: 0;
+    list-style: none;
+}
+
+.listings li {
+    margin-bottom: 10px;
+}
+
+.listings li a {
     color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    text-decoration: none;
+}
+
+.listings li p {
+    color: #ccc;
+    font-size: 14px;
 }

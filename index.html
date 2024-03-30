@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SC Directory</title>
+    <!-- Your meta tags, title, and CSS link here -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>SC Directory</h1>
-        <nav>
-            <ul>
-                <li><a href="#communities">Communities</a></li>
-                <li><a href="#websites">Websites</a></li>
-                <li><a href="#tools">Tools</a></li>
-                <!-- Add more categories as needed -->
-            </ul>
-        </nav>
-    </header>
+    <div id="app">
+        <!-- Header with Menu -->
+        <header>
+            <div class="header-container">
+                <h1>SC Directory</h1>
+                <nav>
+                    <ul>
+                        <li @click="filterListings('communities')">Communities</li>
+                        <li @click="filterListings('websites')">Websites</li>
+                        <li @click="filterListings('tools')">Tools</li>
+                        <!-- Add more categories as needed -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <main>
-        <section id="communities">
-            <h2>Communities</h2>
-            <ul id="communities-list"></ul>
-        </section>
-    
-        <section id="websites">
-            <h2>Websites</h2>
-            <ul id="websites-list"></ul>
-        </section>
-    
-        <section id="tools">
-            <h2>Tools</h2>
-            <ul id="tools-list"></ul>
-        </section>
-    </main>
-    
+        <!-- Main Content Area -->
+        <main>
+            <section>
+                <h2>{{ currentCategory }}</h2>
+                <ul class="listings">
+                    <li v-for="item in filteredListings" :key="item.name">
+                        <a :href="item.url" target="_blank">{{ item.name }}</a>
+                        <p>{{ item.description }}</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 SC Directory</p>
-    </footer>
-
+    <!-- Your script tags here -->
+    <script src="assets/js/vue.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
 </body>
 </html>
