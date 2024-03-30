@@ -1,6 +1,7 @@
-// src/App.js
+// App.js
 import React from "react";
-import Launcher from "./components/launcher";
+import Launcher from "./launcher";
+import "./launcher.css";
 
 function App() {
   return (

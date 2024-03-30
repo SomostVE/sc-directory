@@ -1,8 +1,7 @@
-// src/components/launcher.js
+// Launcher.js
 import React from "react";
 import Website from "./website";
 import websites from "./websites";
-import "./launcher.css";
 
 function Launcher() {
   return (

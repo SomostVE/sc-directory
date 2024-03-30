@@ -1,7 +1,7 @@
-// src/components/website.js
+// Website.js
 import React from "react";
 
-function Website({ name, url, logo }) {
+function website({ name, url, logo }) {
   return (
     <div className="website-box" onClick={() => window.open(url, "_blank")}>
       <img src={logo} alt={name + " Logo"} />
@@ -10,4 +10,4 @@ function Website({ name, url, logo }) {
   );
 }
 
-export default Website;
+export default website;
