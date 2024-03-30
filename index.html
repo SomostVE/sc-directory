@@ -3,12 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SC Directory Launcher</title>
+  <title>SC Directory</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app" class="container">
+    <div v-if="currentPage === 'websites'" class="website-grid">
+      <website-card v-for="website in websites" :key="website.name" :website="website" />
+    </div>
+
+    <div v-else-if="currentPage === 'pages'" class="pages-list">
+      <input type="text" v-model="filterText" placeholder="Filter Pages">
+      <page-item v-for="page in filteredPages" :key="page.url" :page="page" />
+    </div>
+
+    <div class="navigation">
+      <button @click="changePage('websites')">Websites</button>
+      <button @click="changePage('pages')">Pages</button>
+    </div>
+  </div>
+
   <!-- Include Vue.js -->
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.prod.js"></script>
+  <!-- Your app script -->
+  <script src="app.js"></script>
 </body>
 </html>
