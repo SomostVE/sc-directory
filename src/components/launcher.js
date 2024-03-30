@@ -1,8 +1,8 @@
-// src/Launcher.js
+// src/components/launcher.js
 import React from "react";
-import Website from "./websites";
+import Website from "./website";
 import websites from "./websites";
-import "./Launcher.css"; // Create this file for styling
+import "./launcher.css";
 
 function Launcher() {
   return (

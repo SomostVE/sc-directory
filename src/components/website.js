@@ -1,4 +1,4 @@
-// src/components/Website.js
+// src/components/website.js
 import React from "react";
 
 function Website({ name, url, logo }) {
