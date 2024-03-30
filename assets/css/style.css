@@ -1,45 +1,36 @@
-/* Reset some default styles */
-body, ul {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-/* Header Styles */
-header {
+/* Launcher Header Styles */
+.launcher-header {
     background-color: #000;
     color: #fff;
     padding: 20px;
+    text-align: center;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Launcher Menu Styles */
+.launcher-menu {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
 }
 
-nav ul {
+.launcher-menu ul {
     list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
+.launcher-menu li {
+    display: inline-block;
     margin-right: 20px;
     cursor: pointer;
+    color: #fff;
 }
 
-nav ul li:hover {
+.launcher-menu li:hover {
     text-decoration: underline;
 }
 
-/* Main Content Styles */
-main {
+/* Launcher Content Styles */
+.launcher-content {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -47,21 +38,21 @@ main {
     color: #fff;
 }
 
-.listings {
+.launcher-listings {
     padding: 0;
     list-style: none;
 }
 
-.listings li {
+.launcher-listings li {
     margin-bottom: 10px;
 }
 
-.listings li a {
+.launcher-listings li a {
     color: #fff;
     text-decoration: none;
 }
 
-.listings li p {
+.launcher-listings li p {
     color: #ccc;
     font-size: 14px;
 }

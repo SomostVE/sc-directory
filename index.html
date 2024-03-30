@@ -6,39 +6,29 @@
 </head>
 <body>
     <div id="app">
-        <!-- Header with Menu -->
-        <header>
-            <div class="header-container">
-                <h1>SC Directory</h1>
-                <nav>
-                    <ul>
-                        <li @click="filterListings('communities')">Communities</li>
-                        <li @click="filterListings('websites')">Websites</li>
-                        <li @click="filterListings('tools')">Tools</li>
-                        <!-- Add more categories as needed -->
-                    </ul>
-                </nav>
-            </div>
+        <!-- Launcher Header -->
+        <header class="launcher-header">
+            <h1>SC Directory</h1>
         </header>
 
-        <!-- Main Content Area -->
-        <main>
-            <section>
-                <h2>{{ currentCategory }}</h2>
-                <ul class="listings">
-                    <li v-for="item in filteredListings" :key="item.name">
-                        <a :href="item.url" target="_blank">{{ item.name }}</a>
-                        <p>{{ item.description }}</p>
-                    </li>
-                </ul>
-            </section>
+        <!-- Main Menu -->
+        <nav class="launcher-menu">
+            <ul>
+                <li @click="setCurrentCategory('communities')">Communities</li>
+                <li @click="setCurrentCategory('websites')">Websites</li>
+                <li @click="setCurrentCategory('tools')">Tools</li>
+                <!-- Add more categories as needed -->
+            </ul>
+        </nav>
+
+        <!-- Launcher Content Area -->
+        <main class="launcher-content">
+            <sc-directory v-if="currentCategory" :category="currentCategory"></sc-directory>
         </main>
     </div>
 
     <!-- Your script tags here -->
     <script src="assets/js/vue.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-
 </body>
 </html>

@@ -1,7 +1,7 @@
 Vue.component('sc-directory', {
+    props: ['category'],
     data() {
       return {
-        currentCategory: 'Communities',
         listings: [],
         filteredListings: []
       };
@@ -9,37 +9,48 @@ Vue.component('sc-directory', {
     mounted() {
       this.fetchListings();
     },
+    watch: {
+      category: function() {
+        this.filterListings();
+      }
+    },
     methods: {
       fetchListings() {
         fetch('data/listings.json')
           .then(response => response.json())
           .then(data => {
-            this.listings = data;
-            this.filterListings('communities');
+            this.listings = data[this.category];
+            this.filterListings();
           })
           .catch(error => {
             console.error('Error fetching listings:', error);
           });
       },
-      filterListings(category) {
-        this.currentCategory = category;
-        this.filteredListings = this.listings[category];
+      filterListings() {
+        this.filteredListings = this.listings;
       }
     },
     template: `
-      <section>
-        <h2>{{ currentCategory }}</h2>
-        <ul class="listings">
+      <div class="launcher-listings">
+        <ul>
           <li v-for="item in filteredListings" :key="item.name">
             <a :href="item.url" target="_blank">{{ item.name }}</a>
             <p>{{ item.description }}</p>
           </li>
         </ul>
-      </section>
+      </div>
     `
   });
   
   new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+      currentCategory: 'communities' // Default category
+    },
+    methods: {
+      setCurrentCategory(category) {
+        this.currentCategory = category;
+      }
+    }
   });
   
