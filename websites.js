@@ -1,5 +1,5 @@
-// src/components/websites.js
-const websites = [
+// websites.js
+export default [
   {
     name: "SC Trade Tools",
     url: "https://sc-trade.tools/home",
@@ -17,5 +17,3 @@ const websites = [
   },
   // Add more websites as needed
 ];
-
-export default websites;
