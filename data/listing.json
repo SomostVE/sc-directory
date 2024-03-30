@@ -1,0 +1,39 @@
+{
+    "communities": [
+      {
+        "name": "Example Community 1",
+        "description": "A description of the community.",
+        "url": "https://example.com/community1"
+      },
+      {
+        "name": "Example Community 2",
+        "description": "Another community description.",
+        "url": "https://example.com/community2"
+      }
+    ],
+    "websites": [
+      {
+        "name": "Example Website 1",
+        "description": "A description of the website.",
+        "url": "https://example.com/website1"
+      },
+      {
+        "name": "Example Website 2",
+        "description": "Another website description.",
+        "url": "https://example.com/website2"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Example Tool 1",
+        "description": "A description of the tool.",
+        "url": "https://example.com/tool1"
+      },
+      {
+        "name": "Example Tool 2",
+        "description": "Another tool description.",
+        "url": "https://example.com/tool2"
+      }
+    ]
+  }
+  
