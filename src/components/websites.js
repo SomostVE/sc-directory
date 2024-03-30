@@ -1,13 +1,18 @@
-// src/websites.js
+// src/components/websites.js
 const websites = [
   {
-    name: "Website 1",
-    url: "https://example.com/website1",
+    name: "SC Trade Tools",
+    url: "https://sc-trade.tools/home",
     logo: "https://via.placeholder.com/150",
   },
   {
-    name: "Website 2",
-    url: "https://example.com/website2",
+    name: "Fleetyards",
+    url: "https://fleetyards.net",
+    logo: "https://via.placeholder.com/150",
+  },
+  {
+    name: "UEX Corporation",
+    url: "https://uexcorp.space",
     logo: "https://via.placeholder.com/150",
   },
   // Add more websites as needed
