@@ -1,4 +1,12 @@
-// Vue instance setup
 new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+      currentCategory: 'websites' // Default category: Websites
+    },
+    methods: {
+      setCurrentCategory(category) {
+        this.currentCategory = category;
+      }
+    }
   });
+  
