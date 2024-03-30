@@ -16,7 +16,7 @@ Vue.component('sc-directory', {
     },
     methods: {
       fetchListings() {
-        fetch('data/listings.json')
+        fetch('../../data/listings.json')
           .then(response => response.json())
           .then(data => {
             this.listings = data[this.category];
